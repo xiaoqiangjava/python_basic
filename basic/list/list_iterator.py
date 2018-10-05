@@ -6,3 +6,6 @@
 name_list = ["xiaoqiang", "wenwen", "zhangsan", "lisi"]
 for name in name_list:
     print("My name is %s" % name)
+
+# 2. 应用场景：尽管python中的列表可以存储不同类型的数据，但在开发中更多的应用场景是：
+# 列表存储相同类型的数据，通过迭代遍历，在循环体内部针对列表的每一项元素执行相同的操作
