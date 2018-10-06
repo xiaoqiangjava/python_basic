@@ -34,7 +34,9 @@ name_list.append("zhangsan")
 # 3.4.2 list.insert(index, object)可以在列表指定索引位置插入数据
 name_list.insert(1, "美女")
 print("新增数据后的name_list: ", name_list)
-# 3.4.3 list.extend(list)方法可以将其他列表中的内容追加到新的列表中
+# 3.4.3 list.extend(list)方法可以将其他列表中的内容追加到新的列表中，该方法等价于：list += list
+# 对list做+=赋值运算时，本质上时调用了list的extend()方法，所以当把一个list作为参数传递给一个函数时
+# 如果函数内部使用了+=操作，则会影响到函数外边list的值
 temp_list = ["孙悟空", "猪八戒", "沙师弟"]
 name_list.extend(temp_list)
 print("extend方法追加之后的name_list: ", name_list)
