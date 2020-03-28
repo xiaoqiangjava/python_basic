@@ -29,3 +29,25 @@ def tow_sum(nums, target):
 
         map_nums[num] = i
     return []
+
+
+# three sum, LeetCode 15
+def three_sum(nums):
+    """
+    查找集合中三个元素的和为0，找出所有匹配的相，但是不能重复
+    :type nums: List[int]
+    :rtype: List[List[int]]
+    """
+    nums.sort()
+    temp = set()
+    result = set()
+    for i, x in enumerate(nums[:-2]):
+        for y in nums[i+1:]:
+            if (-x - y) in temp:
+                result.add((-x - y, x, y))
+        temp.add(x)
+    return map(list, result)
+
+
+res = three_sum([-1, 0, 1, 2, -1, -4])
+print(res)
